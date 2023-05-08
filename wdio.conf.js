@@ -27,6 +27,9 @@ exports.config = {
   exclude: [
     // 'path/to/excluded/files'
   ],
+  suites: {
+    auth: ['./test/specs/auth.e2e.js'],
+  },
   //
   // ============
   // Capabilities
