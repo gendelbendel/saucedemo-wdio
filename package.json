@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "chai": "^4.3.7",
+    "config": "^3.3.9",
     "mocha": "^10.2.0"
   }
 }
