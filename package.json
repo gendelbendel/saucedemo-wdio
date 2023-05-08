@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wdio": "wdio run ./wdio.conf.js",
-    "wdio:auth": "wdio run wdio.conf.js --suite auth"
+    "wdio:auth": "wdio run wdio.conf.js --suite auth",
+    "wdio:inventory": "wdio run wdio.conf.js --suite inventory"
   },
   "author": "David Ward",
   "license": "BSD-3-Clause",
