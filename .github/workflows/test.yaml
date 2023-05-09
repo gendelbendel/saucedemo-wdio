@@ -11,10 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Update packages
-        run: sudo apt-get update
-      - name: Install Chrome
-        run: sudo apt-get install google-chrome-stable
+      - uses: browser-actions/setup-chrome@v1
+      - run: chrome --version
       - uses: actions/checkout@v3
       - name: Use Node.js
         uses: actions/setup-node@v3
