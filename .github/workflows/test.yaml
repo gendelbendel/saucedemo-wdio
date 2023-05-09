@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install Chromium
+        run: sudo apt-get install chromium-browser
       - uses: actions/checkout@v3
       - name: Use Node.js
         uses: actions/setup-node@v3
@@ -21,4 +23,4 @@ jobs:
       - name: Unit tests
         run: npm run unit
       - name: e2e tests
-        run: npm run wdio
+        run: npm run github:wdio
