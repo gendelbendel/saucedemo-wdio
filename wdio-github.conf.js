@@ -14,15 +14,8 @@ exports.config = {
       acceptInsecureCerts: true,
       'goog:chromeOptions': {
         args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
+        binary: `${systemSync('which chrome')}`,
       },
     },
-  ],
-  services: [
-    [
-      'chromedriver',
-      {
-        chromedriverCustomPath: `${systemSync('which chrome')}`,
-      },
-    ],
   ],
 };
