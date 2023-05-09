@@ -4,7 +4,7 @@
   "description": "A Webdriverio (wdio) e2e project testing against saucedemo.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "github:wdio": "wdio run ./wdio-github.conf.js",
     "unit": "mocha ./test/specs/unit/*.unit.js",
     "wdio": "wdio run ./wdio.conf.js",
     "wdio:auth": "wdio run wdio.conf.js --suite auth",
