@@ -1,4 +1,9 @@
 const basicConfig = require('./wdio.conf');
+const child_process = require('child_process');
+
+function systemSync(cmd) {
+  return child_process.execSync(cmd).toString();
+}
 
 exports.config = {
   ...basicConfig.config,
@@ -11,5 +16,13 @@ exports.config = {
         args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
       },
     },
+  ],
+  services: [
+    [
+      'chromedriver',
+      {
+        chromedriverCustomPath: `${systemSync('which chrome')}`,
+      },
+    ],
   ],
 };
