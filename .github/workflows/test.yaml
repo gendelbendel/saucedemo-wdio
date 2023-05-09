@@ -16,5 +16,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '19.x'
-      - run: npm ci
-      - run: npm run unit
+      - name: Install
+        run: npm ci
+      - name: Unit tests
+        run: npm run unit
+      - name: e2e tests
+        run: npm run wdio
