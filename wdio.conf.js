@@ -28,8 +28,8 @@ exports.config = {
     // 'path/to/excluded/files'
   ],
   suites: {
-    auth: ['./test/specs/auth.e2e.js'],
-    inventory: ['./test/specs/inventory.e2e.js'],
+    auth: ['./test/specs/e2e/auth.e2e.js'],
+    inventory: ['./test/specs/e2e/inventory.e2e.js'],
   },
   //
   // ============

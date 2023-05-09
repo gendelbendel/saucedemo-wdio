@@ -1,6 +1,6 @@
-const LoginPage = require('../pageobjects/login.page');
-const InventoryPage = require('../pageobjects/inventory.page');
-const util = require('../../lib/util');
+const LoginPage = require('../../pageobjects/login.page');
+const InventoryPage = require('../../pageobjects/inventory.page');
+const util = require('../../../lib/util');
 const config = require('config');
 
 describe('Inventory', () => {
