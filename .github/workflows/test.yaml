@@ -11,13 +11,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # - uses: browser-actions/setup-chrome@v1
-      #   with:
-      #       chrome-version: 1121454
-      - run: |
-          VERSION_STRING="113.0.5672.92-1"
-          wget "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${VERSION_STRING}_amd64.deb"
-          sudo dpkg -i "google-chrome-stable_${VERSION_STRING}_amd64.deb"
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+        with:
+          ## Method for obtaining number:
+          ## https://github.com/browser-actions/setup-chrome/issues/216#issuecomment-1292337561
+          chrome-version: 1121454
+      ## If the browser-actions/setup-chrome@v1 doesn't work, use this instead
+      ## Source: https://gist.github.com/colbyfayock/a068e67143798ac88b240aba63f0f2b9
+      # - name: Install Chrome (manually)
+      #   run: |
+      #     VERSION_STRING="113.0.5672.92-1"
+      #     wget "https://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${VERSION_STRING}_amd64.deb"
+      #     sudo dpkg -i "google-chrome-stable_${VERSION_STRING}_amd64.deb"
       - uses: actions/checkout@v3
       - name: Use Node.js
         uses: actions/setup-node@v3
